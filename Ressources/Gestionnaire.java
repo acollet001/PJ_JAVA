@@ -1,5 +1,4 @@
 import java.util.*;
-import java.text.SimpleDateFormat;
 import java.io.*;
 
 
@@ -12,12 +11,12 @@ public class Gestionnaire {
 
   }
 
-  public Chatbot getClass(String bot, String [] args){
+  public Chatbot getClass(String bot, String [] args) throws BotException{
     try{
         return (Chatbot) this.tab.get(bot).newInstance();
-      }catch(Exception e){}
-
-        return null;
+      }catch(Exception e){
+        throw new BotException(bot);
+      }
   }
 
 

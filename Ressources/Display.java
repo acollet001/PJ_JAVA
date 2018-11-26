@@ -1,7 +1,4 @@
 import java.util.*;
-import java.text.SimpleDateFormat;
-
-
 
 public class Display {
   Scanner sc = new Scanner(System.in);

@@ -1,17 +1,18 @@
 import java.util.*;
 import java.text.SimpleDateFormat;
-import java.io.*;
-
-
 
 public class Time extends Chatbot {
 
+  private String date(){
+    String pattern = "EEEEE dd MMMMM 'et il est' HH'h'mm";
+    SimpleDateFormat simpleDateFormat= new SimpleDateFormat(pattern, new Locale("fr", "FR"));
+    String date=simpleDateFormat.format(new Date());
+    return date;
+  }
 
-public void send(String[] args){
-String pattern = "EEEEE dd MMMMM 'et il est' HH'h'mm";
-SimpleDateFormat simpleDateFormat= new SimpleDateFormat(pattern, new Locale("fr", "FR"));
-String date=simpleDateFormat.format(new Date());
-System.out.println("Nous sommes "+ date);
+  public void send(String[] args){
+    String date=date();
+    System.out.println("[Time] Nous sommes "+ date);
 
-}
+  }
 }

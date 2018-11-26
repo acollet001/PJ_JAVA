@@ -1,10 +1,5 @@
-import java.util.*;
-import java.text.SimpleDateFormat;
-
-
-
 public class User {
-  String name;
+  private String name;
 
   private void setName(String name) {
     this.name=name;
