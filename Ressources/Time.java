@@ -10,7 +10,7 @@ public class Time extends Chatbot {
     return date;
   }
 
-  public void send(String[] args){
+  public void send(String[] args,String[]argbot){
     String date=date();
     System.out.println("[Time] Nous sommes "+ date);
 

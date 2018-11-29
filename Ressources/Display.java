@@ -7,9 +7,28 @@ public class Display {
 
   public String name(String user){
       System.out.print("["+user+"]:");
-      String str = sc.nextLine();
-      return str;
+      String [] mots = decoupe();
+      return mots;
   }
+
+
+private String[] decoupe(){
+
+  String str = sc.nextLine();
+  final String SEPARATEUR = " ";
+  String [] mots = str.split(SEPARATEUR);
+  System.out.println(mots.remove(0));
+return mots;
+}
+
+public String firstArg(String[] arg){
+  String str =arg[0];
+return str;
+}
+
+
+
+
 
 
 }
