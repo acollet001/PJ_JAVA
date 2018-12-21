@@ -1,3 +1,2 @@
 Main-Class: Main
-
-Class-Path: \org\json 
+Class-Path: org.json.jar
