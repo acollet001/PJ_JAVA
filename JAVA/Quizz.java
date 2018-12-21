@@ -40,11 +40,24 @@ public class Quizz extends Chatbot {
           Collections.shuffle(tab);
           int corr = placeCorrect(tab,correct);
           printList(tab);
+          int arg2=-1;
+          //String str;
+          while (arg2==-1){
+            String str = sc.nextLine();
+            final String SEPARATEUR = " ";
+            String [] mots = str.split(SEPARATEUR);
+            arg2=checkArg(mots);
 
-          String str = sc.nextLine();
-          if (Integer.parseInt(str)==corr){
-            compteur++;
+          if (arg2!=-1){
+            if (Integer.parseInt(str)==corr){
+              System.out.println("Bonne réponse!");
+              compteur++;
+            }
+            else{
+              System.out.println("Mauvaise réponse! La bonne réponse était "+correct);
+            }
           }
+        }
         }catch(Exception e){
           e.printStackTrace();
         }
@@ -101,12 +114,12 @@ public class Quizz extends Chatbot {
     try{
       int arg1 =Integer.parseInt(argbot[0],10);
       if (arg1<1) {
-        System.out.println("[Quizz] Mon un argument est un entier positif! Je ne sais pas quoi faire avec "+argbot[0]);
+        System.out.println("[Quizz] Mon argument est un entier positif! Je ne sais pas quoi faire avec "+argbot[0]);
         return -1;
       }
       return arg1;
     }catch (Exception e){
-      System.out.println("[Quizz] Mon un argument est un entier positif! Je ne sais pas quoi faire avec "+argbot[0]);
+      System.out.println("[Quizz] Mon argument est un entier positif! Je ne sais pas quoi faire avec "+argbot[0]);
       return -1;
     }
   }

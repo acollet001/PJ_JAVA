@@ -52,12 +52,12 @@ public class Icndb extends Chatbot {
           try{
             int arg1 =Integer.parseInt(argbot[0],10);
             if (arg1<1) {
-              System.out.println("[Icndb] Mon un argument est un entier positif! Je ne sais pas quoi faire avec "+argbot[0]);
+              System.out.println("[Icndb] Mon argument est un entier positif! Je ne sais pas quoi faire avec "+argbot[0]);
               return -1;
             }
             return arg1;
           }catch (Exception e){
-            System.out.println("[Icndb] Mon un argument est un entier positif! Je ne sais pas quoi faire avec "+argbot[0]);
+            System.out.println("[Icndb] Mon argument est un entier positif! Je ne sais pas quoi faire avec "+argbot[0]);
             return -1;
           }
         }
